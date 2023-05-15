@@ -1,9 +1,6 @@
-# InformationGathering
-Information Gathering Techiques
-
 # To perform information gathering techniques
 
-# AIM:
+## AIM:
 
 To perform information gathering techniques using kali linux 
 
@@ -38,6 +35,9 @@ http://www.whois.com/whois website to get detailed information about a domain na
 
 ## Finding IP address:
 ping command is available on Windows as well as on Linux OS. Following is the example to find out the IP address of saveetha.ac.in.
+```
+ping saveetha.ac.in
+```
 ## Output:
 
 ![Screenshot from 2023-05-15 05-11-17](https://github.com/A-Thiyagarajan/InformationGathering/assets/118707693/18c141eb-f997-4e6a-970b-1278bf0f085f)
@@ -62,21 +62,33 @@ https://web.archive.org/
 # Webserver Fingerprinting:
 
 ## Netcat:
-### Output:
+```
+nc 172.17.52.118 80
+```
+## Output:
 
 
 ![Screenshot from 2023-05-13 05-08-48](https://github.com/A-Thiyagarajan/InformationGathering/assets/118707693/7c38b307-51d1-45b5-85ec-751ed930ba9b)
 
 
 ## nmap:
-### Output:
+```
+nmap -p 21 -sV --script=banner ftp.vim.org
+```
+## Output:
 
 ![Screenshot from 2023-05-13 05-14-53](https://github.com/A-Thiyagarajan/InformationGathering/assets/118707693/4631c0fd-1296-4c74-82fa-8950c48c5a61)
 
 
 
 ## Whatweb:
-### Output:
+```
+whatweb infosys.com
+```
+```
+whatweb -v -a 3 172.17.52.201
+```
+## Output:
 
 ![Screenshot from 2023-05-15 04-48-16](https://github.com/A-Thiyagarajan/InformationGathering/assets/118707693/ab6e52ed-b1c2-4c7c-b4cb-edc75d6de5e6)
 
@@ -84,7 +96,10 @@ https://web.archive.org/
 
 
 ## httprint:
-### Output:
+```
+httprint -h 172.17.52.201 -s /usr/share/httprint/signatures.txt -P0 |more
+```
+## Output:
 
 ![Screenshot from 2023-05-15 04-16-42](https://github.com/A-Thiyagarajan/InformationGathering/assets/118707693/a70e6db5-d324-4bee-80f9-9dfdf9b37338)
 
@@ -93,7 +108,9 @@ https://web.archive.org/
 
 # Tracing the Location
 ## TCP Traceroute:
+```
 sudo traceroute -T www.saveetha.ac.in
+```
 ## Output:
 
 
@@ -102,7 +119,9 @@ sudo traceroute -T www.saveetha.ac.in
 
 
 ## UDP Traceroute:
+```
 sudo traceroute -U www.saveetha.ac.in
+```
 ## Output:
 
 
@@ -111,7 +130,9 @@ sudo traceroute -U www.saveetha.ac.in
 
 
 ## ICMP Traceroute:
+```
 sudo traceroute  www.saveetha.ac.in
+```
 ## Output:
 
 ![Screenshot from 2023-05-15 04-53-50](https://github.com/A-Thiyagarajan/InformationGathering/assets/118707693/00a45edd-a2df-4cc6-858c-87d5b4a6b659)
