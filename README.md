@@ -86,6 +86,9 @@ nmap -p 21 -sV --script=banner ftp.vim.org
 whatweb infosys.com
 ```
 ```
+whatweb zoho.com
+```
+```
 whatweb -v -a 3 172.17.52.201
 ```
 ## Output:
